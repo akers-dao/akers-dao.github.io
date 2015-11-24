@@ -21,5 +21,5 @@ npm run play
 **Software Used:**
 
 1. Angularjs (https://angularjs.org) use for view model
-1. Material Design (http://www.getmdl.io/)
+1. Angular Material (material.angularjs.org/)
 1. NPM (http://npmjs.com) workflow tooling
