@@ -1,0 +1,27 @@
+{
+  "name": "open_weather_app",
+  "description": "Exercise App for Job Interview",
+  "main": "app/src/index.js",
+  "authors": [
+    "Falos Akers"
+  ],
+  "license": "ISC",
+  "moduleType": [
+    "es6"
+  ],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-messages": "~1.4.7",
+    "angular-material": "~0.11.4",
+    "angular-resource": "~1.4.7",
+    "angular-touch": "~1.4.7"
+  }
+}

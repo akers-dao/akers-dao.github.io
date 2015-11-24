@@ -1,0 +1,37 @@
+<md-card class="weather-card">
+  <md-card-content>
+    <h1>{{name}}</h1>
+    <h2>{{day}}</h2>
+    <p>{{main}}</p>
+    <div layout="row">
+      <div flex="33" class="weather-card-icon">
+        <md-icon class="material-icons md-48">{{icon}}</md-icon>
+      </div>
+      <span flex></span>
+      <div class="weather-card-temp" layout="row" layout-align="end center">
+        <div>{{temp.day | number: 0}}
+          <i class="material-icons weather-card-degrees">wb_sunny</i>
+          <md-tooltip md-direction="bottom">
+            Day Temp
+          </md-tooltip>
+        </div>
+        <div>/</div>
+        <div>{{temp.eve | number: 0}}
+          <i class="material-icons weather-card-degrees">brightness_3</i>
+          <md-tooltip md-direction="bottom">
+            Evening Temp
+          </md-tooltip>
+        </div>
+
+      </div>
+    </div>
+    <div layout="row" layout-align="start center">
+      <div class="weather-card-info">Hum: {{humidity}}%</div>
+      <div class="weather-card-info">Low: {{temp.min | number: 0}} &#8457;</div>
+      <div class="weather-card-info">High: {{temp.max | number: 0}} &#8457;</div>
+      <span flex></span>
+      <p class="weather-card-detail">{{description}}</p>
+    </div>
+  </md-card-content>
+
+</md-card>

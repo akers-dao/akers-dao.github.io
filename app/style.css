@@ -1,0 +1,169 @@
+body, .container{
+    background-color: #EEEEEE
+}
+.md-48{
+	font-size: 55px !important;
+}
+.weather-card-degrees{
+	font-size: 12px !important;
+    position: relative;
+    bottom: 14px;
+    margin-left: -10px;
+    margin-right: -10px;
+    font-weight: 800;
+}
+.weather-card-time{
+	font-size: 12px !important;
+    position: relative;
+    bottom: 14px;
+    margin-left: -10px;
+    margin-right: -10px;
+    font-weight: 800;
+}
+.weather-form{
+    width: 50%;
+}
+.weather-card-icon{
+  position: relative;
+    bottom: 15px;
+}
+.weather-card-info{
+  padding-left: 6px;
+}
+.weather-card-temp{
+    font-size: 33px;
+    font-weight: 500;
+}
+.weather-card-detail{
+	margin: 0px
+}
+.weather-card{
+     min-width: 400px;
+     background-image: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(0, #FFFFFF),
+        color-stop(1, #F9F9FC)
+    );
+    background-image: -o-linear-gradient(bottom, #FFFFFF 0%, #F9F9FC 100%);
+    background-image: -moz-linear-gradient(bottom, #FFFFFF 0%, #F9F9FC 100%);
+    background-image: -webkit-linear-gradient(bottom, #FFFFFF 0%, #F9F9FC 100%);
+    background-image: -ms-linear-gradient(bottom, #FFFFFF 0%, #F9F9FC 100%);
+    background-image: linear-gradient(to bottom, #FFFFFF 0%, #F9F9FC 100%);
+}
+
+/*iPhone 6 in portrait & landscape*/
+@media only screen 
+and (min-device-width : 375px) 
+and (max-device-width : 667px) { 
+  .weather-card {
+        min-width: 300px;
+    }
+  
+ }
+
+/*iPhone 6 Plus in portrait & landscape*/
+@media only screen 
+and (min-device-width : 414px) 
+and (max-device-width : 736px) {
+  .weather-card {
+        min-width: 300px;
+    }
+}
+
+/*iPhone 5 & 5S in portrait & landscape*/
+@media only screen 
+and (min-device-width : 320px) 
+and (max-device-width : 568px) {
+  .weather-card {
+        min-width: 300px;
+    }  
+}
+
+.side-bar-search-heading{
+    color: gainsboro;
+}
+.side-bar-content{
+    padding-top: 20px;
+}
+.error-container{
+    color: slategrey;
+    font-size: 20px;
+}
+.error-header{
+    font-size: 28px;
+    color: #7B3E3E;
+}
+.error-header>md-icon{
+    color: #7B3E3E;
+    font-size: 34px;
+    position: relative;
+    right: 12px;
+    bottom: 8px;
+}
+.error-content{
+    width: 600px;
+}
+.error-content>span{
+    display: block;
+    margin-top: 20px;
+    margin-bottom: -10px;
+    font-weight: 400;
+    margin-left: 10px;
+}
+.error-list{
+    list-style: none
+}
+
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 300;
+  src: local('RobotoDraft Light'), local('RobotoDraft-Light'), url(fonts/u0_CMoUf3y3-4Ss4ci-VwfR_54zmj3SbGZQh3vCOwvY.woff) format('woff');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 400;
+  src: local('RobotoDraft'), local('RobotoDraft-Regular'), url(fonts/0xES5Sl_v6oyT7dAKuoni7rIa-7acMAeDBVuclsi6Gc.woff) format('woff');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 500;
+  src: local('RobotoDraft Medium'), local('RobotoDraft-Medium'), url(fonts/u0_CMoUf3y3-4Ss4ci-VwaTA90I55Xt7owhZwpPnMsc.woff) format('woff');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: normal;
+  font-weight: 700;
+  src: local('RobotoDraft Bold'), local('RobotoDraft-Bold'), url(fonts/u0_CMoUf3y3-4Ss4ci-VwRbnBKKEOwRKgsHDreGcocg.woff) format('woff');
+}
+@font-face {
+  font-family: 'RobotoDraft';
+  font-style: italic;
+  font-weight: 400;
+  src: local('RobotoDraft Italic'), local('RobotoDraft-Italic'), url(fonts/er-TIW55l9KWsTS1x9bTfoo3ZslTYfJv0R05CazkwN8.woff) format('woff');
+}
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Material Icons'), local('MaterialIcons-Regular'), url(fonts/MaterialIcons-Regular.woff) format('woff');
+}
+
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 1;
+  letter-spacing: normal;
+  text-transform: none;
+  display: inline-block;
+  word-wrap: normal;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}

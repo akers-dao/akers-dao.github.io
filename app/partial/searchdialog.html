@@ -1,0 +1,24 @@
+<md-dialog layout-padding class="weather-form">
+	<md-dialog-content>
+		<md-progress-linear md-mode="indeterminate" ng-if="vm.isProgress"></md-progress-linear>
+		<form name="weatherForm" novalidate ng-submit="vm.handleWeatherSearch(vm.address)">
+			<md-input-container md-no-float>
+				<md-icon>search</md-icon>
+				<input name="address" ng-model="vm.address" required minlength="4" placeholder="search (Arlington,VA)" ng-pattern="/\w*,\w{2}/">
+				<div ng-messages="weatherForm.address.$error" ng-if="weatherForm.address.$dirty">
+					<div ng-message="required">This is required!</div>
+					<div ng-message="minlength">That's too short!</div>
+					<div ng-message="pattern">Incorrect Format (Arlington,VA)</div>
+				</div>
+			</md-input-container>
+		</form>
+		<md-dialog-actions layout="row" layout-align="end center">
+			<md-button ng-click="vm._handleWeatherSearch(vm.address)" class="md-primary" ng-disabled="weatherForm.$invalid">
+				Search By City
+			</md-button>
+			<md-button ng-click="vm._handleWeatherSearch('current')" class="md-primary">
+				Search By Current Location
+			</md-button>
+		</md-dialog-actions>
+	</md-dialog-content>
+</md-dialog>

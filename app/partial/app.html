@@ -1,0 +1,70 @@
+<div layout="row" flex>
+
+	<md-sidenav layout="column" md-component-id="left" class="md-sidenav-left md-whiteframe-z2" md-is-locked-open="$mdMedia('gt-md')">
+		<md-toolbar class="md-whiteframe-1dp" layout-padding>
+			<div class="md-toolbar-tools">
+				<h3>Welcome</h3>
+				<span flex></span>
+				<md-button class="md-icon-button" ng-click="vm.toggleSideBar()" hide-gt-md>
+					<md-icon>close</md-icon>
+				</md-button>
+			</div>
+		</md-toolbar>
+		<md-content layout-padding class="side-bar-content">
+			<form name="weatherForm" ng-submit="vm.handleWeatherSearch(vm.address,true,weatherForm)" novalidate>
+				<md-input-container md-no-float>
+					<md-icon>search</md-icon>
+					<input name="address" ng-model="vm.address" required minlength="4" placeholder="search (Arlington,VA)" ng-pattern="/\w*,\w{2}/">
+					<div ng-messages="weatherForm.address.$error" ng-if="weatherForm.address.$dirty">
+						<div ng-message="required">This is required!</div>
+						<div ng-message="minlength">That's too short!</div>
+						<div ng-message="pattern">Incorrect Format (Arlington,VA)</div>
+					</div>
+				</md-input-container>
+				<div class="layout-row" layout-align="end center">
+					<md-button ng-disabled="weatherForm.$invalid">search by city</md-button>
+				</div>
+			</form>
+			<list-item items="vm.sideBarListItems" getPreviousWeather="vm.getPreviousWeather(item, $event)"></list-item>
+		</md-content>
+	</md-sidenav>
+
+	<div layout="column" flex>
+		<md-toolbar class="md-whiteframe-1dp">
+			<div class="md-toolbar-tools">
+				<md-button class="md-icon-button" ng-click="vm.toggleSideBar()" hide-gt-md>
+					<md-icon>menu</md-icon>
+				</md-button>
+				<h2>
+					<span>Open Weather API Example</span>
+				</h2>
+			</div>
+		</md-toolbar>
+
+		<md-content layout-padding layout="row" layout-wrap class="container">
+			<md-progress-linear md-mode="indeterminate" ng-if="vm.isProgress && !vm.isCommunicationError"></md-progress-linear>
+			<div ng-if="vm.cards.length === 0 && !vm.isCommunicationError" layout-align="center center" class="layout-row layout-fill">
+				<p class="layout-column">
+					<span>Enter City, State via sidebar search field to see your local weather</span>
+					<md-button class="md-raised" ng-click="vm.handleWeatherSearch('current')" ng-disabled="vm.clickedWeatherSearchBtn">
+						<span ng-show="vm.clickedWeatherSearchBtn">Loading</span>
+						<span ng-show="!vm.clickedWeatherSearchBtn">Search By Current Location</span>
+					</md-button>
+
+				</p>
+			</div>
+			<div ng-if="vm.isCommunicationError" layout-align="center center" class="layout-column layout-fill error-container">
+				<div class="error-header"><md-icon>error</md-icon>Communication Error</div>
+				<p class="error-content">Try accessing the service again via the sidebar search field to see your local weather. If search does not work again. <span>Try the following items:</span></p>
+				<ul class="error-list">
+					<li><md-icon>check</md-icon>Check Your Internet Connection</li>
+					<li><md-icon>check</md-icon>Restart your browser</li>
+					<li><md-icon>check</md-icon>Accept the request from browser to access your current location</li>
+					<li><md-icon>check</md-icon>Try again later</li>
+				</ul>
+			</div>
+			<weather-card ng-if="!vm.isCommunicationError" data="{{card}}" data-name="{{vm.name}}" ng-repeat="card in vm.cards track by $index" flex="auto" data-index="{{$index}}"></weather-card>
+
+		</md-content>
+	</div>
+</div>

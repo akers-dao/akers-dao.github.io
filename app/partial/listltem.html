@@ -1,0 +1,14 @@
+<md-divider></md-divider>
+<div layout-padding class="side-bar-search-heading">Saved Searches</div>
+<md-list>
+  <md-list-item ng-click="getPreviousWeather('current')">
+    <p>Current Location</p>
+  </md-list-item>
+  <md-list-item ng-repeat="item in items track by $index" ng-click="getPreviousWeather(item, $event)">
+    <p>{{item}}</p>
+    <!--<span flex></span>-->
+    <md-button class="md-icon-button md-secondary" ng-click="removeItem(item, $event)">
+      <md-icon>delete</md-icon>
+    </md-button>
+  </md-list-item>
+</md-list>
