@@ -25,10 +25,17 @@
 
       </div>
     </div>
-    <div layout="row" layout-align="start center">
+    <div layout="row" layout-align="start center" hide-sm>
       <div class="weather-card-info">Hum: {{humidity}}%</div>
       <div class="weather-card-info">Low: {{temp.min | number: 0}} &#8457;</div>
       <div class="weather-card-info">High: {{temp.max | number: 0}} &#8457;</div>
+      <span flex></span>
+      <p class="weather-card-detail">{{description}}</p>
+    </div>
+    <div layout="row" layout-align="start center" show-sm hide-gt-sm>
+      <div class="weather-card-info">Hum: {{humidity}}%</div>
+      <div class="weather-card-info">L: {{temp.min | number: 0}} &#8457;</div>
+      <div class="weather-card-info">H: {{temp.max | number: 0}} &#8457;</div>
       <span flex></span>
       <p class="weather-card-detail">{{description}}</p>
     </div>
