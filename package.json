@@ -10,9 +10,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "watchify -e app/src/index.js -o app/bundle.js --debug && ng-annotate - & live-server app",
+    "dev": "watchify -e app/src/index.js -o app/bundle.js --debug && ng-annotate - & live-server",
     "build": "browserify -e app/src/index.js -o app/bundle.js --debug && ng-annotate -ar -",
-    "play": "node_modules/.bin/live-server app"
+    "play": "node_modules/.bin/live-server"
   },
   "repository": {
     "type": "git",

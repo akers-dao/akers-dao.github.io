@@ -7,7 +7,7 @@ class WeatherCardDirective {
 		this.scope = {
 			data: '@'
 		};
-		this.templateUrl = "./partial/weathercard.html";
+		this.templateUrl = "./app/partial/weathercard.html";
 		_iconService.set(this, IconService);
 	}
 

@@ -5,7 +5,7 @@ const _localStorage = new WeakMap();
  */
 class ListItemDirective {
 	constructor($rootScope, LocalStorage) {
-		this.templateUrl = "./partial/listltem.html"
+		this.templateUrl = "./app/partial/listltem.html"
 		this.scope = {
 			items: "=",
 			getPreviousWeather: "&"
