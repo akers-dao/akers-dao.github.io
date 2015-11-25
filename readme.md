@@ -1,8 +1,8 @@
-##Open Weather API Example
+##Open Weather App Example
 
 ---------
 
-It provides potential employers a bit of insight into how I tackle a problems, how I code and structure my HTML.
+It provides potential employers a bit of insight into how I tackle problems, how I code and structure my HTML.
 
 **Installation:**
 
