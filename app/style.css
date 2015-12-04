@@ -54,18 +54,18 @@ body, .container{
 }
 
 /*iPhone 6 in portrait & landscape*/
-@media only screen 
-and (min-device-width : 375px) 
-and (max-device-width : 667px) { 
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px) {
   .weather-card {
         min-width: 300px;
     }
-  
+
  }
 
 /*iPhone 6 Plus in portrait & landscape*/
-@media only screen 
-and (min-device-width : 414px) 
+@media only screen
+and (min-device-width : 414px)
 and (max-device-width : 736px) {
   .weather-card {
         min-width: 300px;
@@ -73,12 +73,12 @@ and (max-device-width : 736px) {
 }
 
 /*iPhone 5 & 5S in portrait & landscape*/
-@media only screen 
-and (min-device-width : 320px) 
+@media only screen
+and (min-device-width : 320px)
 and (max-device-width : 568px) {
   .weather-card {
         min-width: 300px;
-    }  
+    }
 }
 
 .side-bar-search-heading{
