@@ -180,7 +180,7 @@ class MainController {
     const self = this;
     _mdDialog.get(this).show({
       clickOutsideToClose: true,
-      templateUrl: './partial/searchdialog.html',
+      templateUrl: './app/partial/searchdialog.html',
       // preserveScope: true,
       controller: function DialogController($mdDialog) {
         /**
