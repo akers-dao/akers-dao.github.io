@@ -1,4 +1,10 @@
+/**
+ * Icon service
+ * @private
+ * @const {object}
+ */
 const _iconService = new WeakMap();
+
 /**
  * Class representing weather-card directive
  */
@@ -102,6 +108,14 @@ class WeatherCardDirective {
 
 		return dayName[num];
 	}
+	
+	/**
+	 * Provides the Instance of Weather Card Directive.  This is required when using ES2015 class sytnax
+	 * @param {IconService} IconService 
+	 * @static
+	 * @return {object} Instance of Weather Card Directive
+	 */
+	
 	static weatherCardFactory(IconService) {
 		WeatherCardDirective.instance = new WeatherCardDirective(IconService);
 		return WeatherCardDirective.instance;
