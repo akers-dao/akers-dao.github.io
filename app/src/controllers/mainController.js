@@ -139,9 +139,9 @@ class MainController {
             MainController.changeProgressState.bind(this)();
             MainController.setCards.call(this, data);
             resolve();
-          }, () => {
-            console.log('error');
+          }, (data) => {
             MainController.changeProgressState.bind(this)();
+            MainController.setCards.call(this, data);
             reject();
           });
 
@@ -151,12 +151,12 @@ class MainController {
         this.clickedWeatherSearchBtn = !this.clickedWeatherSearchBtn;
         _weatherService.get(this).getWeatherService()
           .then((data) => {
+            MainController.changeProgressState.bind(this)();
             MainController.setCards.call(this, data);
-            MainController.changeProgressState.bind(this)();
             resolve();
-          }, () => {
-            console.log('error');
+          }, (data) => {
             MainController.changeProgressState.bind(this)();
+            MainController.setCards.call(this, data);
             reject();
           });
       }
