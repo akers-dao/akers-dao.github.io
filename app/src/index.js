@@ -1,3 +1,7 @@
+/**
+ * Bootstrap angular
+ */
+
 import angular from 'angular';
 import ngMaterial from 'angular-material';
 import ngMessages from 'angular-messages';
@@ -13,11 +17,11 @@ import LocalStorage from './services/LocalStorage.js';
 import weatherCardDirective from './directives/weatherCardDirective.js';
 import listItemDirective from './directives/listItemDirective.js';
 
-var WeatherApp = angular.module('WeatherApp', ["ngMessages", "ngMaterial", "ngAnimate", "ngAria", "ngRoute"])
+const WeatherApp = angular.module('WeatherApp', ['ngMessages', 'ngMaterial', 'ngAnimate', 'ngAria', 'ngRoute'])
 	.config(appConfig)
 	.controller('MainController', MainController)
 	.service('WeatherService', WeatherService)
 	.service('IconService', IconService)
 	.service('LocalStorage', LocalStorage)
 	.directive('weatherCard', weatherCardDirective.weatherCardFactory)
-	.directive('listItem', listItemDirective.directiveFactory)
+	.directive('listItem', listItemDirective.listItemFactory);
