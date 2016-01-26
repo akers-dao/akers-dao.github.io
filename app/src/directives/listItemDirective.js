@@ -79,4 +79,6 @@ class ListItemDirective {
   }
 }
 
+ListItemDirective.listItemFactory.$inject = ['$rootScope', 'LocalStorage'];
+
 export default ListItemDirective;

@@ -122,4 +122,6 @@ class WeatherCardDirective {
 	}
 }
 
+WeatherCardDirective.weatherCardFactory.$inject = ['IconService'];
+
 export default WeatherCardDirective;

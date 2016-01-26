@@ -19,7 +19,7 @@ class MainController {
    * @return {object} Instance of MainController
    */
   constructor(WeatherService, $mdDialog, $q, $mdSidenav, LocalStorage, $scope) {
-		_mdDialog.set(this, $mdDialog);
+	_mdDialog.set(this, $mdDialog);
     _weatherService.set(this, WeatherService);
     _q.set(this, $q);
     _mdSidenav.set(this, $mdSidenav);
@@ -218,5 +218,7 @@ class MainController {
     });
   }
 }
+
+MainController.$inject = ['WeatherService', '$mdDialog', '$q', '$mdSidenav', 'LocalStorage', '$scope'];
 
 export default MainController;

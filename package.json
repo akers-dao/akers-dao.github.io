@@ -10,8 +10,8 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "watchify -e app/src/index.js -o app/bundle.js --debug && ng-annotate - & live-server",
-    "build": "browserify -e app/src/index.js -o app/bundle.js --debug && ng-annotate -ar -",
+    "dev": "watchify -e app/src/index.js -o app/bundle.js --debug & live-server",
+    "build": "browserify  -e app/src/index.js -o app/bundle.js",
     "play": "node_modules/.bin/live-server"
   },
   "repository": {
@@ -33,6 +33,7 @@
     "babel-polyfill": "^6.2.0",
     "babel-preset-es2015": "^6.1.18",
     "babelify": "^7.2.0",
-    "live-server": "^0.8.2"
+    "live-server": "^0.8.2",
+    "uglifyify": "^3.0.1"
   }
 }
