@@ -62,7 +62,7 @@ class WeatherService {
 			else {
         /* geolocation IS NOT available */
         _http.get(this).get(`http://api.openweathermap.org/data/2.5/forecast
-					/daily?appid=2de143494c0b295cca9337e1e96b00e0&q=${_obj.address}
+					/daily?appid=351ed20102b23f5717c91fbc65a32c1c&q=${_obj.address}
 					&units=imperial&cnt=7`)
           .then((data) => {
             resolve(data);
